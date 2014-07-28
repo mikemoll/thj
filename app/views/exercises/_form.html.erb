@@ -1,16 +1,40 @@
-<%= simple_form_for(@exercise) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :excerise_type %>
-    <%= f.input :load_prescribed %>
-    <%= f.input :sets_prescribed %>
-    <%= f.input :reps_prescribed %>
-    <%= f.input :actual_reps_set_1 %>
-    <%= f.association :user %>
+<%= form_for @exercise, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :excerise_type, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :excerise_type, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :load_prescribed, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :load_prescribed, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sets_prescribed, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :sets_prescribed, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :reps_prescribed, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :reps_prescribed, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :actual_reps_set_1, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :actual_reps_set_1, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  exercises_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
