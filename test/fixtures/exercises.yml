@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  excerise_type: MyString
+  load_prescribed: 1
+  sets_prescribed: 1
+  reps_prescribed: 1
+  actual_reps_set_1: 1
+  user_id: 
+
+two:
+  excerise_type: MyString
+  load_prescribed: 1
+  sets_prescribed: 1
+  reps_prescribed: 1
+  actual_reps_set_1: 1
+  user_id: 
