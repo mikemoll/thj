@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Excerise type:</strong>
+  <%= @exercise.excerise_type %>
+</p>
+
+<p>
+  <strong>Load prescribed:</strong>
+  <%= @exercise.load_prescribed %>
+</p>
+
+<p>
+  <strong>Sets prescribed:</strong>
+  <%= @exercise.sets_prescribed %>
+</p>
+
+<p>
+  <strong>Reps prescribed:</strong>
+  <%= @exercise.reps_prescribed %>
+</p>
+
+<p>
+  <strong>Actual reps set 1:</strong>
+  <%= @exercise.actual_reps_set_1 %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @exercise.user %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>
